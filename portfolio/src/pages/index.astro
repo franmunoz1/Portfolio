@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Badge from "../components/Badge.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<img
+				class="rounded-full w-12 h-12 mb-4"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC7OnDhPKultO1a1Jm1pV3PF155E_mF6ocqHDLtRU9FQ&s"
+				alt="francisco munoz photo"
+			/>
+			<h1
+				class="text-white text-5xl font-bold flex justify-center flex-row"
+			>
+				Hola, soy Francisco Muñoz
+			</h1>
+			<div class="py-4">
+				<a
+					href="https://www.linkedin.com/in/francisco-agustin-mu%C3%B1oz-695a66256/"
+					target="_blank"
+				>
+					<div class="flex justify-center">
+						<Badge />
+					</div>
+				</a>
+			</div>
+			<h2 class="text-xl opacity-44 flex justify-center py-5">
+				Desarrollador web - Full Stack. De Córdoba, Argentina 🇦🇷.
+			</h2>
+		</section>
+	</main>
+</Layout>
