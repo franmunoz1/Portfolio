@@ -3,6 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Badge from "../components/Badge.astro";
+import Social from "../components/Social.astro";
+
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import GmailIcon from "../icons/GmailIcon.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,7 +19,7 @@ import Badge from "../components/Badge.astro";
 				alt="francisco munoz photo"
 			/>
 			<h1
-				class="text-white text-5xl font-bold flex justify-center flex-row"
+				class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
 			>
 				Hola, soy Francisco Muñoz
 			</h1>
@@ -22,15 +27,36 @@ import Badge from "../components/Badge.astro";
 				<a
 					href="https://www.linkedin.com/in/francisco-agustin-mu%C3%B1oz-695a66256/"
 					target="_blank"
+					class="flex justify-center items-center"
 				>
 					<div class="flex justify-center">
 						<Badge />
 					</div>
 				</a>
 			</div>
-			<h2 class="text-xl opacity-44 flex justify-center py-5">
-				Desarrollador web - Full Stack. De Córdoba, Argentina 🇦🇷.
+			<h2 class="text-2xl opacity-44 flex justify-center py-5">
+				Estudiante avanzado de la carrera de Ingenieria Informatica en
+				la Universidad Blas Pascal. Desarrollador web - Full Stack. De
+				Córdoba, Argentina 🇦🇷.
 			</h2>
+
+			<nav class="flex flex-row gap-10 justify-around">
+				<Social
+					class="w-6 h-6"
+					href="https://www.linkedin.com/in/francisco-agustin-mu%C3%B1oz-695a66256/"
+				>
+					<LinkedinIcon />
+					Linkedin
+				</Social>
+				<Social class="w-6 h-6" href="https://github.com/franmunoz1">
+					<GitHubIcon />
+					GitHub
+				</Social>
+				<Social class="w-6 h-6">
+					<GmailIcon />
+					Gmail
+				</Social>
+			</nav>
 		</section>
 	</main>
 </Layout>
