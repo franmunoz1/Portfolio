@@ -10,53 +10,112 @@ import GmailIcon from "../icons/GmailIcon.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+<Layout title="Francisco Muñoz - Portfolio">
+	<main
+		class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen text-white"
+	>
+		<section class="w-full max-w-5xl mx-auto px-6 py-32 text-center">
 			<img
-				class="rounded-full w-12 h-12 mb-4"
+				class="rounded-full w-24 h-24 mb-6 mx-auto border-4 border-white shadow-md"
 				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC7OnDhPKultO1a1Jm1pV3PF155E_mF6ocqHDLtRU9FQ&s"
-				alt="francisco munoz photo"
+				alt="Francisco Muñoz"
 			/>
-			<h1
-				class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
-			>
-				Hola, soy Francisco Muñoz
+			<h1 class="text-4xl sm:text-5xl font-bold mb-4">
+				Hola, soy <span class="text-blue-400">Francisco Muñoz</span>
 			</h1>
-			<div class="py-4">
+			<h2 class="text-xl text-gray-300 max-w-2xl mx-auto">
+				Estudiante avanzado de Ingeniería Informática en la Universidad
+				Blas Pascal. Desarrollador Web Full Stack apasionado por la
+				tecnología y el diseño. Desde Córdoba, Argentina 🇦🇷.
+			</h2>
+
+			<div class="py-8">
 				<a
 					href="https://www.linkedin.com/in/francisco-agustin-mu%C3%B1oz-695a66256/"
 					target="_blank"
-					class="flex justify-center items-center"
+					class="flex justify-center"
 				>
-					<div class="flex justify-center">
-						<Badge />
-					</div>
+					<Badge />
 				</a>
 			</div>
-			<h2 class="text-2xl opacity-44 flex justify-center py-5">
-				Estudiante avanzado de la carrera de Ingenieria Informatica en
-				la Universidad Blas Pascal. Desarrollador web - Full Stack. De
-				Córdoba, Argentina 🇦🇷.
-			</h2>
 
-			<nav class="flex flex-row gap-10 justify-around">
+			<nav class="flex flex-wrap justify-center gap-6 py-4 text-sm">
 				<Social
-					class="w-6 h-6"
 					href="https://www.linkedin.com/in/francisco-agustin-mu%C3%B1oz-695a66256/"
 				>
-					<LinkedinIcon />
-					Linkedin
+					<LinkedinIcon class="w-6 h-6" /> LinkedIn
 				</Social>
-				<Social class="w-6 h-6" href="https://github.com/franmunoz1">
-					<GitHubIcon />
-					GitHub
+				<Social href="https://github.com/franmunoz1">
+					<GitHubIcon class="w-6 h-6" /> GitHub
 				</Social>
-				<Social class="w-6 h-6">
-					<GmailIcon />
-					Gmail
+				<Social href="mailto:francisco.dev@gmail.com">
+					<GmailIcon class="w-6 h-6" /> Gmail
 				</Social>
 			</nav>
 		</section>
+
+		<section class="w-full max-w-5xl mx-auto px-6 py-16">
+			<h3 class="text-3xl font-bold mb-10 text-center">
+				Tecnologías y Herramientas
+			</h3>
+			<div
+				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center text-center text-gray-200"
+			>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>HTML</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>CSS / Tailwind</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>JavaScript</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>React</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>Node.js</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>Django</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>Python</span
+				>
+				<span
+					class="bg-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-700"
+					>Astro</span
+				>
+			</div>
+		</section>
+
+		<section class="w-full max-w-5xl mx-auto px-6 py-16">
+			<h3 class="text-3xl font-bold mb-10 text-center">
+				Proyectos destacados
+			</h3>
+			<div class="grid gap-6 sm:grid-cols-2">
+				<Card
+					title="Sitio de reseñas de videojuegos"
+					description="Aplicación full-stack con sistema de calificaciones con estrellas, gráficos dinámicos y base de datos integrada."
+					link="https://github.com/franmunoz1/reseñas-videojuegos"
+				/>
+				<Card
+					title="Sistema de presupuestos en C++"
+					description="Aplicación de consola para generar presupuestos detallados, con almacenamiento en archivos y cálculos dinámicos."
+					link="#"
+				/>
+			</div>
+		</section>
+
+		<footer class="text-center py-10 text-gray-500 text-sm">
+			Hecho con ❤️ por Francisco Muñoz — {new Date().getFullYear()}
+		</footer>
 	</main>
 </Layout>

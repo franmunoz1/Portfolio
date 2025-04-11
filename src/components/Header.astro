@@ -1,9 +1,54 @@
-<header class="flex justify-center items-center py-3 w-[1120px] mx-auto">
-    <nav class="flex flex-row gap-x-10 opacity-80 px-4">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="">Projects</a>
-        <a href="">Contact</a>
-    </nav>
+---
+// Header.astro
+---
+
+<header class="w-full bg-gray-900 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 text-xl font-bold">Francisco Muñoz</div>
+
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <button
+                id="menu-btn"
+                class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+                aria-label="Toggle Menu"
+            >
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Nav Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#" class="hover:text-blue-400 transition">Home</a>
+                <a href="#" class="hover:text-blue-400 transition">About</a>
+                <a href="#" class="hover:text-blue-400 transition">Experience</a
+                >
+                <a href="#" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#" class="hover:text-blue-400 transition">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Nav Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="#" class="hover:text-blue-400 transition">Home</a>
+            <a href="#" class="hover:text-blue-400 transition">About</a>
+            <a href="#" class="hover:text-blue-400 transition">Experience</a>
+            <a href="#" class="hover:text-blue-400 transition">Projects</a>
+            <a href="#" class="hover:text-blue-400 transition">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Script que hace funcionar el toggle -->
+    <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        btn?.addEventListener("click", () => {
+            menu?.classList.toggle("hidden");
+        });
+    </script>
 </header>
